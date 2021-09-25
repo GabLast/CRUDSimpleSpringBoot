@@ -14,7 +14,7 @@ import java.util.Locale;
 public class EstudianteController {
 
     @GetMapping("/")
-    public String home() { return "redirect:/home"; }
+    public String index() { return "redirect:/home"; }
 
     @GetMapping("/home")
     public String visualizar(Model model){
@@ -22,7 +22,7 @@ public class EstudianteController {
         model.addAttribute("title", "Home");
         model.addAttribute("listaEstudiantes", Fake.getInstancia().getEstudiantes());
 
-        return "/Home";
+        return "Home";
     }
 
     @GetMapping("/create")
@@ -30,7 +30,7 @@ public class EstudianteController {
 
         model.addAttribute("title", "Registrando Estudiante");
 
-        return "/RegistrarEstudiante";
+        return "RegistrarEstudiante";
     }
 
     @PostMapping("/create")
@@ -44,7 +44,7 @@ public class EstudianteController {
 
         model.addAttribute("title", "Editando Estudiante");
 
-        return "/EditarEstudiante";
+        return "EditarEstudiante";
     }
 
     @PostMapping("/edit")

@@ -1,4 +1,4 @@
-<#include "base.ftl">
+<#include "base.ftlh">
 <#macro page_head>
     <#if title?has_content>
         <title>${title}</title>

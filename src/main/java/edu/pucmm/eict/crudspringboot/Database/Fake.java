@@ -1,19 +1,23 @@
 package edu.pucmm.eict.crudspringboot.Database;
 
 import edu.pucmm.eict.crudspringboot.Models.Estudiante;
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class Fake {
 
     private static Fake database;
-    private List<Estudiante> estudiantes;
+    private List<Estudiante> estudiantes = new ArrayList<>();
 
-    private Fake(){
+    public void init(){
         Estudiante a = new Estudiante();
-        a.setApellido("Marte");
         a.setNombre("Gabriel");
+        a.setApellido("Marte");
         a.setTelefono("123321");
+        a.setMatricula(10000000);
         estudiantes.add(a);
     }
 

@@ -13,23 +13,11 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Final Ac&aacute;pites
+                        Gesti&oacute;n de Estudiantes
                     </a>
                     <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="/SinConexion-ShortURL.html">URLs Acortadas Sin Conexi&oacute;n</a></li>
+                        <li><a class="dropdown-item" href="/#">Registrar Estudiante</a></li>
                     </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Administraci&oacute;n
-                    </a>
-                    <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="/administracion/listar-usuarios/view_page/1">Listar Usuarios</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/logout">Cerrar sesi&oacute;n</a>
                 </li>
             </ul>
         </div>
