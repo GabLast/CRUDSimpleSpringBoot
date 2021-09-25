@@ -44,7 +44,7 @@ public class EstudianteController {
 
         model.addAttribute("title", "Editando Estudiante");
 
-        return "/RegistrarEstudiante";
+        return "/EditarEstudiante";
     }
 
     @PostMapping("/edit")
