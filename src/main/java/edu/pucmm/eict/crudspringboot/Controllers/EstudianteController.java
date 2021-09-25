@@ -13,13 +13,16 @@ import java.util.Locale;
 @RequestMapping("/")
 public class EstudianteController {
 
+    @GetMapping("/")
+    public String home() { return "redirect:/home"; }
+
     @GetMapping("/home")
     public String visualizar(Model model){
 
         model.addAttribute("title", "Home");
         model.addAttribute("listaEstudiantes", Fake.getInstancia().getEstudiantes());
 
-        return "/freemarker/pruebaI18n";
+        return "/Home";
     }
 
     @GetMapping("/create")
