@@ -16,7 +16,7 @@
                         <div class="col-md-1">
                         </div>
                         <div class="col-md-10 me-auto">
-                            <h1 style="text-align: center;">Ingrese los datos del Estudiante: </h1>
+                            <h1 style="text-align: center; color: white !important;">Ingrese los datos del Estudiante: </h1>
                             </br>
                             <div class="container mt-2">
                                 <div class="row justify-content-md-center">
@@ -42,8 +42,8 @@
                                                     <input type="text" class="form-control" id="telefono" name="telefono">
                                                 </div>
 
-                                                <button type="submit" class="btn btn-primary">Registrar</button>
-                                                <button type="button" class="btn btn-primary">Inicio</button>
+                                                <button type="submit" class="btn btn-primary mt-3">Registrar</button>
+                                                <button type="button" class="btn btn-primary mt-3">Inicio</button>
                                             </form>
                                         </div>
                                     </div>
