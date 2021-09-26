@@ -16,7 +16,7 @@
                         Gesti&oacute;n de Estudiantes
                     </a>
                     <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="/#">Registrar Estudiante</a></li>
+                        <li><a class="dropdown-item" href="create">Registrar Estudiante</a></li>
                     </ul>
                 </li>
             </ul>
