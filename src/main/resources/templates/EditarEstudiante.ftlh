@@ -50,8 +50,8 @@
                         </div>
                     </form>
                 <#else>
-                    <h5>Error: El estudiante no fue cargado apropiadamente</h5>
-                    <a href="/" class="btn btn-go-home btn-dark"><button>VOLVER AL INICIO</button></a>
+                    <h5 class="text-light">Error: El estudiante no existe</h5>
+                    <button class="btn btn-go-home btn-custom1">Volver al Inicio</button>
                 </#if>
             </div>
             <div class="col-md-4">

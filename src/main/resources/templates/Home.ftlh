@@ -77,11 +77,11 @@
                                         </#list>
                                     <#else>
                                         <tr class="table-secondary">
-                                            <td>????</td>
-                                            <td>????</td>
-                                            <td>????</td>
-                                            <td>????</td>
-                                            <td>????</td>
+                                            <td>No</td>
+                                            <td>Hay</td>
+                                            <td>Datos</td>
+                                            <td>Ingresados</td>
+                                            <td>Actualmente</td>
                                         </tr>
                                     </#if>
                                     </tbody>
