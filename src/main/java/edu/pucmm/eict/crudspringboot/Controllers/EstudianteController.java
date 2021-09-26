@@ -37,7 +37,7 @@ public class EstudianteController {
     @PostMapping("/create")
     public String create(@ModelAttribute("estudiante") Estudiante estudiante){
         Fake.getInstancia().insert(estudiante);
-        return "redirect:/crear";
+        return "redirect:/create";
     }
 
     @GetMapping("/edit")
