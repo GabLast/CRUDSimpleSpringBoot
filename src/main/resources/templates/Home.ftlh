@@ -56,7 +56,7 @@
                                         <td>
                                             <div class="row justify-content-evenly">
                                                 <div class="col-md-6">
-                                                    <form method="get" action="edit" modelAttribute="matricula">
+                                                    <form method="get" action="edit">
                                                         <input type="number" name="matricula" value="${es.getMatricula()?string.computer}" hidden/>
                                                         <button class="btn btn-sm btn-custom1" type="submit">
                                                             <span class="material-icons">edit</span>
