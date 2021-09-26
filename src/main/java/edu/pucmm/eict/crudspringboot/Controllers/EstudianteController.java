@@ -29,6 +29,7 @@ public class EstudianteController {
     @GetMapping("/create")
     public String crear(Model model){
 
+        model.addAttribute("matriculaID", Estudiante.generateID());
         model.addAttribute("title", "Registrando Estudiante");
 
         return "RegistrarEstudiante";
@@ -43,7 +44,6 @@ public class EstudianteController {
     @GetMapping("/edit")
     public String editar(Model model, @PathParam("matricula") Integer matricula){
 
-        System.out.println(matricula);
         model.addAttribute("estudiante", Fake.getInstancia().getEstudianteByID(matricula));
         model.addAttribute("title", "Editando Estudiante");
 
@@ -58,7 +58,6 @@ public class EstudianteController {
 
     @PostMapping("/delete")
     public String delete(@PathParam("matricula") Integer matricula){
-//        System.out.println(matricula);
         Fake.getInstancia().remove(Fake.getInstancia().getEstudianteByID(matricula));
         return "redirect:/home";
     }

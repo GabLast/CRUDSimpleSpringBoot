@@ -24,14 +24,19 @@ public class Estudiante {
     }
 
     public Estudiante(String nombre, String apellido, String telefono) {
-        if(Fake.getInstancia().getEstudiantes().size() > 0)
-        {
-            this.matricula = 10000000 + (Fake.getInstancia().getEstudiantes().get(Fake.getInstancia().getEstudiantes().size() - 1).getMatricula() - 10000000);
-        }else {
-            this.matricula = 10000000;
-        }
+        this.matricula = generateID();
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
+    }
+
+    public static int generateID()
+    {
+        if(Fake.getInstancia().getEstudiantes().size() > 0)
+        {
+            return 10000000 + (Fake.getInstancia().getEstudiantes().get(Fake.getInstancia().getEstudiantes().size() - 1).getMatricula() - 10000000) + 1;
+        }else {
+            return 10000000;
+        }
     }
 }

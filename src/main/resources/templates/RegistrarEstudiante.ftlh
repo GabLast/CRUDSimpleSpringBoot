@@ -7,53 +7,63 @@
 
 <#macro page_body>
     <body>
-    <div class="container-fluid">
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-1">
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <form method="post" action="/create" enctype="application/x-www-form-urlencoded"
+                      modelAttribute="estudiante">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Registrar Estudiante</h5>
                         </div>
-                        <div class="col-md-10 me-auto">
-                            <h1 style="text-align: center; color: white !important;">Ingrese los datos del Estudiante: </h1>
-                            </br>
-                            <div class="container mt-2">
-                                <div class="row justify-content-md-center">
-                                    <div class="col-6">
-                                        <div class="card" style="padding: 20px; background-color: lightgray">
-                                            <form action="/registrar" method="post"  enctype="application/x-www-form-urlencoded" modelAttribute="estudiante">
+                        <div class="modal-body">
 
-                                                <div class="form-group">
-                                                    <label for="nombre">Nombre:</label>
-                                                    <input type="text" class="form-control" id="nombre" name="nombre">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="apellido">Apellido:</label>
-                                                    <input type="text" class="form-control" id="apellido" name="apellido">
-                                                </div>
+                            <input type="number" class="form-control" id="matricula" name="matricula"
+                                    <#if matriculaID?has_content>
+                                        value="${matriculaID?string.computer}"
+                                    </#if> hidden required>
 
-                                                <div class="form-group">
-                                                    <label for="matricula">Matricula:</label>
-                                                    <input type="text" class="form-control" id="matricula" name="matricula">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="telefono">Telefono:</label>
-                                                    <input type="text" class="form-control" id="telefono" name="telefono">
-                                                </div>
-
-                                                <button type="submit" class="btn btn-primary mt-3">Registrar</button>
-                                                <button type="button" class="btn btn-primary mt-3">Inicio</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="-Nombre-"
+                                       required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label">Apellido:</label>
+                                <input type="text" class="form-control" id="apellido" name="apellido"
+                                       placeholder="-Apellido-" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Tel&eacute;fono:</label>
+                                <input type="text" class="form-control" id="telefono" name="telefono"
+                                       placeholder="-Telefono-" required>
                             </div>
                         </div>
-                        <div class="col md-1">
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-dark">Registrar</button>
                         </div>
                     </div>
-                </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
             </div>
         </div>
     </div>

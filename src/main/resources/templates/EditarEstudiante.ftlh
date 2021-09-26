@@ -21,7 +21,7 @@
             </div>
             <div class="col-md-4">
                 <#if estudiante?has_content>
-                    <form method="post" action="/edit" modelAttribute="estudiante">
+                    <form method="post" action="/edit" enctype="application/x-www-form-urlencoded" modelAttribute="estudiante">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title">Editar Estudiante</h5>
@@ -29,7 +29,7 @@
                             <div class="modal-body">
                                 <div class="mb-3">
                                     <label for="matricula" class="form-label">Matr&iacute;cula:</label>
-                                    <input type="number" class="form-control" id="matricula" name="matricula" value="${estudiante.getMatricula()?string.computer}" placeholder="Producto" readonly required>
+                                    <input type="number" class="form-control" id="matricula" name="matricula" value="${estudiante.getMatricula()?string.computer}" placeholder="-Matricula-" readonly required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="nombre" class="form-label">Nombre:</label>

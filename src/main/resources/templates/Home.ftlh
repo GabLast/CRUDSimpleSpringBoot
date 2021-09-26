@@ -45,44 +45,44 @@
                                     </tr>
                                     </thead>
                                     <tbody class="text-center table-bordered">
-                                    <tr class="table-secondary">
-                                        <#if listaEstudiantes?has_content>
-
+                                    <#if listaEstudiantes?has_content>
                                         <#list listaEstudiantes as es>
-                                        <td>${es.getMatricula()?string.computer}</td>
-                                        <td>${es.getNombre()}</td>
-                                        <td>${es.getApellido()}</td>
-                                        <td>${es.getTelefono()}</td>
-                                        <td>
-                                            <div class="row justify-content-evenly">
-                                                <div class="col-md-6">
-                                                    <form method="get" action="/edit">
-                                                        <input type="number" name="matricula" value="${es.getMatricula()?string.computer}" hidden/>
-                                                        <button class="btn btn-sm btn-custom1" type="submit">
-                                                            <span class="material-icons">edit</span>
-                                                        </button>
-                                                    </form>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <form method="post" action="/delete">
-                                                        <input type="number" name="matricula" value="${es.getMatricula()?string.computer}" hidden/>
-                                                        <button class="btn btn-sm btn-eliminar"
-                                                                type="submit">
-                                                            <span class="material-icons">clear</span>
-                                                        </button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        <td>
-                                            </#list>
-                                            <#else>
-                                    <tr>
-                                        <th scope="col">????</th>
-                                        <th scope="col">????</th>
-                                        <th scope="col">????</th>
-                                        <th scope="col">????</th>
-                                        <th scope="col">????</th>
-                                    </tr>
+                                            <tr class="table-secondary">
+
+                                                <td>${es.getMatricula()?string.computer}</td>
+                                                <td>${es.getNombre()}</td>
+                                                <td>${es.getApellido()}</td>
+                                                <td>${es.getTelefono()}</td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <a href="/edit?matricula=${es.getMatricula()?string.computer}">
+                                                                <button class="btn btn-sm btn-custom1" type="submit">
+                                                                    <span class="material-icons">edit</span>
+                                                                </button>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col">
+                                                            <form method="post" action="/delete" enctype="application/x-www-form-urlencoded">
+                                                                <input type="number" name="matricula" value="${es.getMatricula()?string.computer}" hidden/>
+                                                                <button class="btn btn-sm btn-eliminar"
+                                                                        type="submit">
+                                                                    <span class="material-icons">clear</span>
+                                                                </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </#list>
+                                    <#else>
+                                        <tr class="table-secondary">
+                                            <td>????</td>
+                                            <td>????</td>
+                                            <td>????</td>
+                                            <td>????</td>
+                                            <td>????</td>
+                                        </tr>
                                     </#if>
                                     </tbody>
                                 </table>
