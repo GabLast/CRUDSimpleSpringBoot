@@ -51,7 +51,9 @@
                     </form>
                 <#else>
                     <h5 class="text-light">Error: El estudiante no existe</h5>
-                    <button class="btn btn-go-home btn-custom1">Volver al Inicio</button>
+                    <a href="/">
+                        <button class="btn btn-go-home btn-custom1">Volver al Inicio</button>
+                    </a>
                 </#if>
             </div>
             <div class="col-md-4">
