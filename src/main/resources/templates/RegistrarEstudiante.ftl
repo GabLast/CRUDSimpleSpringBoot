@@ -22,7 +22,7 @@
                                 <div class="row justify-content-md-center">
                                     <div class="col-6">
                                         <div class="card" style="padding: 20px; background-color: lightgray">
-                                            <form action="/registrar" method="post"  enctype="application/x-www-form-urlencoded">
+                                            <form action="/registrar" method="post"  enctype="application/x-www-form-urlencoded" modelAttribute="estudiante">
 
                                                 <div class="form-group">
                                                     <label for="nombre">Nombre:</label>
