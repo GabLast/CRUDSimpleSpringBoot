@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.Locale;
 
 
@@ -40,11 +41,13 @@ public class EstudianteController {
     }
 
     @GetMapping("/edit")
-    public String editar(Model model, @ModelAttribute("estudiante") Estudiante estudiante){
+    public String editar(Model model, @PathParam("matricula") Integer matricula){
 
+        System.out.println(matricula);
+        model.addAttribute("estudiante", Fake.getInstancia().getEstudianteByID(matricula));
         model.addAttribute("title", "Editando Estudiante");
 
-        return "EditarEstudiante";
+        return "Home";
     }
 
     @PostMapping("/edit")
@@ -54,8 +57,9 @@ public class EstudianteController {
     }
 
     @PostMapping("/delete")
-    public String delete(@ModelAttribute("estudiante") Estudiante estudiante){
-        Fake.getInstancia().remove(estudiante);
+    public String delete(@PathParam("matricula") Integer matricula){
+        System.out.println(matricula);
+        Fake.getInstancia().remove(Fake.getInstancia().getEstudianteByID(matricula));
         return "redirect:/home";
     }
 }

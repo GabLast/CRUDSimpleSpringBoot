@@ -54,10 +54,25 @@
                                         <td>${es.getApellido()}</td>
                                         <td>${es.getTelefono()}</td>
                                         <td>
-                                            <button class="btn btn-sm btn-custom1"
-                                                    type="submit">
-                                                <span class="material-icons">visibility</span>
-                                            </button>
+                                            <div class="row justify-content-evenly">
+                                                <div class="col-md-6">
+                                                    <form method="get" action="edit" modelAttribute="matricula">
+                                                        <input type="number" name="matricula" value="${es.getMatricula()?string.computer}" hidden/>
+                                                        <button class="btn btn-sm btn-custom1" type="submit">
+                                                            <span class="material-icons">edit</span>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <form method="post" action="delete">
+                                                        <input type="number" name="matricula" value="${es.getMatricula()?string.computer}" hidden/>
+                                                        <button class="btn btn-sm btn-eliminar"
+                                                                type="submit">
+                                                            <span class="material-icons">clear</span>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         <td>
                                             </#list>
                                             <#else>
@@ -72,7 +87,6 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <#--                            if-->
                         </div>
                         <div class="col md-1">
                         </div>
