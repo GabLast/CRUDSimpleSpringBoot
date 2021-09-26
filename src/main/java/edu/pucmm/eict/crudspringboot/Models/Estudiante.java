@@ -24,7 +24,12 @@ public class Estudiante {
     }
 
     public Estudiante(String nombre, String apellido, String telefono) {
-        this.matricula = 10000000 + (Fake.getInstancia().getEstudiantes().get(Fake.getInstancia().getEstudiantes().size() - 1).getMatricula() - 10000000);
+        if(Fake.getInstancia().getEstudiantes().size() > 0)
+        {
+            this.matricula = 10000000 + (Fake.getInstancia().getEstudiantes().get(Fake.getInstancia().getEstudiantes().size() - 1).getMatricula() - 10000000);
+        }else {
+            this.matricula = 10000000;
+        }
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;

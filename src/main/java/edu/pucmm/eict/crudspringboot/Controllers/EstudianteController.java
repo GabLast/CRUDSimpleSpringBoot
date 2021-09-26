@@ -47,18 +47,18 @@ public class EstudianteController {
         model.addAttribute("estudiante", Fake.getInstancia().getEstudianteByID(matricula));
         model.addAttribute("title", "Editando Estudiante");
 
-        return "Home";
+        return "EditarEstudiante";
     }
 
     @PostMapping("/edit")
     public String edit(@ModelAttribute("estudiante") Estudiante estudiante){
         Fake.getInstancia().update(estudiante);
-        return "redirect:/edit";
+        return "redirect:/home";
     }
 
     @PostMapping("/delete")
     public String delete(@PathParam("matricula") Integer matricula){
-        System.out.println(matricula);
+//        System.out.println(matricula);
         Fake.getInstancia().remove(Fake.getInstancia().getEstudianteByID(matricula));
         return "redirect:/home";
     }
